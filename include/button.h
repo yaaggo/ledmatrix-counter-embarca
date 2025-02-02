@@ -9,7 +9,6 @@
 #include <stdbool.h>
 
 extern volatile int8_t counter;
-
 extern int8_t prev_counter;
 
 void button_init(uint8_t pin);

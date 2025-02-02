@@ -115,12 +115,49 @@
       "rotate": 90,
       "attrs": { "color": "green" }
     },
-    { "type": "wokwi-rgb-led", "id": "rgb26", "top": 128.8, "left": -162.1, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 220,
+      "left": -171.4,
+      "rotate": 270,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 191.2,
+      "left": -171.4,
+      "rotate": 270,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 162.4,
+      "left": -171.4,
+      "rotate": 270,
+      "attrs": { "color": "red" }
+    },
     {
       "type": "wokwi-resistor",
       "id": "r1",
+      "top": 195.95,
+      "left": -86.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 176.75,
+      "left": -86.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
       "top": 157.55,
-      "left": -76.8,
+      "left": -86.4,
       "attrs": { "value": "1000" }
     }
   ],
@@ -206,11 +243,15 @@
     [ "btn2:1.r", "pico:GND.2", "black", [ "v39.2", "h-9.6", "v76.8" ] ],
     [ "btn1:2.r", "pico:GP5", "green", [ "v0" ] ],
     [ "btn2:2.r", "pico:GP6", "green", [ "v0" ] ],
-    [ "pico:GP11", "rgb26:G", "limegreen", [ "h-57.6", "v76.8", "h-96" ] ],
-    [ "pico:GP12", "rgb26:R", "red", [ "h-115.2", "v57.64", "h0" ] ],
-    [ "rgb26:B", "pico:GP13", "blue", [ "v9.6", "h116.8", "v-38.4" ] ],
-    [ "rgb26:COM", "r1:1", "black", [ "v28.4", "h57.7", "v-48" ] ],
-    [ "r1:2", "pico:GND.4", "black", [ "v0", "h18", "v-9.6" ] ]
+    [ "led3:A", "pico:GP13", "green", [ "h0", "v-28.8" ] ],
+    [ "led2:A", "pico:GP12", "green", [ "h9.6", "v-76.8" ] ],
+    [ "led1:A", "pico:GP11", "green", [ "h19.2", "v-115.2" ] ],
+    [ "led1:C", "r1:1", "black", [ "h38.4", "v-48.4" ] ],
+    [ "led2:C", "r2:1", "black", [ "h28.8", "v-38.8" ] ],
+    [ "led3:C", "r3:1", "black", [ "h38.4", "v-29.2" ] ],
+    [ "r3:2", "pico:GND.4", "black", [ "v0", "h27.6", "v-9.6" ] ],
+    [ "r2:2", "pico:GND.4", "black", [ "v0", "h27.6", "v-28.8" ] ],
+    [ "r1:2", "pico:GND.4", "black", [ "v0", "h27.6", "v-48" ] ]
   ],
   "dependencies": {}
 }
